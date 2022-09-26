@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fin-stats"
+version = "0.1.0"
+description = "Utility to analyze financial statements"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "fin_stats"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+yfinance = "^0.1.74"
+matplotlib = "^3.6.0"
+emoji = "^2.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+fin-stats = "fin_stats.main:app"
